@@ -1,0 +1,43 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:63795/",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "serverPort": "1248",
+        "serverURL": "http://mfeadns4mrtj5sd5o6hq.westeurope.cloudapp.azure.com",
+        "local-serverURL": "http://localhost:1248/api",
+        "local-workspace": "Evolve60",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "workspace": "MicroFocusDemo"
+      }
+    },
+    "AppIntel_Portal_REST": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "serverURL": "http://localhost:1248/api"
+      },
+      "httpPort": 63795,
+      "useSSL": false,
+      "sslPort": 44347
+    }
+  }
+}

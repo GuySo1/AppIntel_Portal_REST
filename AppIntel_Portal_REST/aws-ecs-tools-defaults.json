@@ -1,0 +1,26 @@
+
+{
+    "region" : "us-west-2",
+    "profile" : "guyso-EA-nonprod",
+    "configuration" : "Debug",
+    "tag"           : "appintelportalrest:latest",
+    "docker-build-working-dir" : "",
+    "cluster"                  : "appintelportalrest",
+    "launch-type"              : "FARGATE",
+    "launch-subnets"           : "subnet-375f417f,subnet-1800fc61,subnet-9ce040c6,subnet-b910f992",
+    "launch-security-groups"   : "sg-d6d762a9",
+    "assign-public-ip"         : true,
+    "task-definition-name"     : "AppIntelPortalREST",
+    "task-cpu"                 : "256",
+    "task-memory"              : "512",
+    "task-execution-role"      : "ecsTaskExecutionRole",
+    "container-name"           : "AppIntelPortalREST",
+    "container-port-mapping"   : "80:80",
+    "container-environment-variables" : "\"ASPNETCORE_ENVIRONMENT\"=\"Development\";\"workspace\"=\"MicroFocusDemo\";\"serverPort\"=\"1248\";\"serverURL\"=\"http://ec2-18-237-218-155.us-west-2.compute.amazonaws.com\"",
+    "skip-image-push"                 : false,
+    "cluster-service"                 : "AppIntelPortalREST",
+    "desired-count"                   : 1,
+    "deployment-minimum-healthy-percent" : 50,
+    "deployment-maximum-percent"         : 200,
+    "vstoolkit-deployment-mode"          : "DeployService"
+}

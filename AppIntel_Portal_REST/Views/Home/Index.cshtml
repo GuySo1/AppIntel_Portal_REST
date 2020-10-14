@@ -1,0 +1,196 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewData["APIAddr"] = Program.GetRESTAPIAddress();
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="60000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>    
+    <div class="carousel-inner" role="listbox">
+        @*  <div class="item active">
+            <img src="~/images/Google.png" alt="" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p style="color:black">
+                    Learn how Google can help you go to cloud.
+                    <a class="btn btn-default" href="https://cloud.google.com/solutions/mainframe-modernization">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>*@
+        @*<div class="item active">
+            <img src="/images/acct.jpg" alt="" class="img-responsive">
+            <div class="carousel-caption" role="option">
+                <p>
+                    Learn how Accenture MyNav can help you go to cloud.
+                    <a class="btn btn-default" href="https://www.accenture.com/us-en/services/cloud-index">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>*@
+        <div class="item active">
+            <img src="~/images/aws.png" alt="" class="img-responsive">
+            <div class="carousel-caption" role="option">
+                <p style="background-color: #a400ff;color:black;">
+                    Learn how AWS can take your mainframe application to the cloud.
+                    <a class="btn btn-default" href="https://aws.amazon.com/blogs/apn/empowering-enterprise-grade-mainframe-workloads-on-aws-with-micro-focus/">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/MicroFocus.png" alt="" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p style="background-color: #00c9ff;color:black;">
+                    Micro Focus Mainframe Modernization.
+                    <a class="btn btn-default" href="https://www.microfocus.com/en-us/products/application-modernization-and-connectivity/overview">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>Inventory report</h3>       
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="inventory" style="margin-top: 15px;">
+            Open
+        </a>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="inventory_Download" style="margin-top: 15px;">
+            Download
+        </a>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="inventory_latest" style="margin-top: 15px;">
+            Open Latest
+        </a>
+    </div>    
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h3>All relationships Report (Cross-reference)</h3>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="XREF" style="margin-top: 15px;">
+            Open
+        </a>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="XREF_Download" style="margin-top: 15px;">
+            Download
+        </a>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="XREF_latest" style="margin-top: 15px;">
+            Open Latest
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Data access report (CRUD)</h3>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="CRUD" style="margin-top: 15px;">
+            Open
+        </a>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="CRUD_Download" style="margin-top: 15px;">
+            Download
+        </a>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="CRUD_latest" style="margin-top: 15px;">
+            Open Latest
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Application Documentation (complex report)</h3>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="execReport" style="margin-top: 15px;">
+            Open
+        </a>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="exec_Download" style="margin-top: 15px;">
+            Download
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Migration Report (complex report)</h3>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="PAReport" style="margin-top: 15px;">
+            Open
+        </a>
+    </div> 
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="PA_Download" style="margin-top: 15px;">
+            Download
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Interactive Analysis (EAWeb)</h3>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" href="@ViewData["EAWebAddr"]" style="margin-top: 15px;">
+            Open
+        </a>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="EAWeb_Embedded" style="margin-top: 15px;">
+            Embedded
+        </a>
+    </div>
+    @*<div class="col-md-1">
+            <a class="btn btn-default" asp-action="DownloadRDP" style="margin-top: 15px;">
+                Full Analyst Access
+            </a>
+        </div>
+        <div class="col-md-6">
+            Full Analyst Client will download an RDP file. Username is google , Password is GCPgcp123.
+        </div>*@
+    @*<div class="col-md-1">
+        <a class="btn btn-default" asp-action="DownloadRDP" style="margin-top: 15px;">
+            Full Analyst Access
+        </a>
+    </div>
+    <div class="col-md-6">
+        Full Analyst Client will download an RDP file. Username is acct , Password is MyNav123.
+    </div>*@
+    <div class="col-md-1">
+        <a class="btn btn-default" asp-action="DownloadRDP" style="margin-top: 15px;">
+            Full Analyst Access
+        </a>
+    </div>
+    <div class="col-md-6">
+        Full Analyst Client will download an RDP file. Username is aws , Password is Amazon123.
+    </div>
+</div>
+
