@@ -13,11 +13,11 @@
       "launchBrowser": true,
       "environmentVariables": {
         "serverPort": "1248",
-        "serverURL": "http://mfeadns4mrtj5sd5o6hq.westeurope.cloudapp.azure.com",
-        "local-serverURL": "http://localhost:1248/api",
-        "local-workspace": "Evolve60",
+        "serverURL": "http://localhost",
+        "remote-serverURL": "http://mfeadns4mrtj5sd5o6hq.westeurope.cloudapp.azure.com",
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "workspace": "MicroFocusDemo"
+        "remote-workspace": "MicroFocusDemo",
+        "workspace": "Evolve60"
       }
     },
     "AppIntel_Portal_REST": {
